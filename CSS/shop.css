@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Product sans', 'Roboto' , sans-serif ;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+li{
+    list-style-type: none;
+}
+/* MAIN */
+.main{
+    padding: 95.2px 0;
+}
+.main-wrap{
+    padding: 70px 15px;
+}
+.product-grid-view{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Số cột tùy ý và chiều rộng tối thiểu của mỗi cột */
+    grid-gap: 0; /* Khoảng cách giữa các sản phẩm */
+}
+.col{
+    padding: 20px 20px;
+    width: 100%;
+}
+.col img{
+    width: 100%;
+}
+.product-image{
+    position: relative;
+}
+.product-wishlist-icon{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 25px;
+    z-index: 2;
+}
+.product-img-back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: bottom 0.3 ease;
+}
+.product-image:hover .product-img-back{
+    opacity: 1;
+}
+
+.product-content{
+    position: relative;
+    padding: 20px 15px 0;
+    font-weight: 600;
+}
+.product-content h2{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-size: 12px;
+}
+.product-content .product-price{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 14px;
+}
+/* PAGINATION */
+.product-pagination{
+    padding-top: 20px;
+}
+.pagination{
+    padding-bottom: 30px;
+    display: flex;
+}
+.pagination{
+    text-align: center;
+    justify-content: center;
+}
+.pagination a, .pagination li {
+    display: block;
+    width: 42px;
+    height: 42px;
+    font-size: 18px;
+    font-weight: 600;
+    color:#b49898;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.active span{
+    color:#000;
+}
+.pagination a:hover{
+    color: #fff;
+    background-color: #000;
+}
